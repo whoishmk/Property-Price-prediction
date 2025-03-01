@@ -63,7 +63,7 @@ if st.button("Submit"):
     if response.status_code == 200:
         api_response = response.json()
         first_content = api_response['choices'][0]['message']['content']  # Extract first content
-        st.success("API Response:")
+        st.success("Predicted Prices:")
         st.write(first_content)
     else:
         st.error(f"Failed to fetch data from API. Status Code: {response.status_code}")
