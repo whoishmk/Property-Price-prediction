@@ -46,7 +46,7 @@ else:
     st.success("Villa")
 
  
-if st.button("Submit"):
+if st.button("Get Price Predictions"):
     # Define the reyquest payload (data)
     data = {
         "model": "deepseek/deepseek-chat:free",
