@@ -1,7 +1,6 @@
 import streamlit as st
 import requests
 import os
-import matplotlib.pyplot as plt
 import numpy as np
 
 # Replace with your OpenRouter API key
@@ -72,8 +71,13 @@ if st.button("Submit"):
 
 
 # define data values
+# define data values
 x = np.array([1, 2, 3, 4])  # X-axis points
-y = x*2  # Y-axis points
+y = x * 2  # Y-axis points
 
-plt.plot(x, y)  # Plot the chart
-plt.show() 
+# Create a figure and axis
+fig, ax = plt.subplots()
+ax.plot(x, y)  # Plot the chart
+
+# Use st.pyplot to render the plot in Streamlit
+st.pyplot(fig)
