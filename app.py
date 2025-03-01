@@ -13,8 +13,6 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Put a image
-st.image("https://vyza-solutions.s3.us-east-2.amazonaws.com/vyza-logo.png", width=200)
 st.title("VYZA Solutions' Property Price Prediction")
 
 # Input widgets for user data
