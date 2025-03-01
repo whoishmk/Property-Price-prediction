@@ -9,7 +9,7 @@ os.environ['API_KEY'] = st.secrets['API_KEY']
 
 # Define the headers for the API request
 headers = {
-    'Authorization': f'Bearer {API_KEY}',
+    'Authorization': f'Bearer {os.environ['API_KEY']}',
     'Content-Type': 'application/json'
 }
 
