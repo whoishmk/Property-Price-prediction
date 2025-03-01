@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import os
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Replace with your OpenRouter API key
 
@@ -67,8 +69,7 @@ if st.button("Submit"):
         st.write(first_content)
     else:
         st.error(f"Failed to fetch data from API. Status Code: {response.status_code}")
-import matplotlib.pyplot as plt
-import numpy as np
+
 
 # define data values
 x = np.array([1, 2, 3, 4])  # X-axis points
