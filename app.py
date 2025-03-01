@@ -29,7 +29,6 @@ if (gated == 'Yes'):
 else:
     st.success("Not gated")
                 
-flat = st.text_input("Enter Flat:")
 property = st.radio("Select Type of Property: ", ('Apartment', 'House' , 'Villa'))
 
 # conditional statement to print 
@@ -50,7 +49,7 @@ if st.button("Submit"):
         "messages": [
             {
                 "role": "user", 
-                "content": f"Average property price in {area} {city} for a {bhk} {gated} {flat} in 2025 and what will be the price in future , just write the numbers and years"
+                "content": f"Average property price in {area} {city} for a {bhk} {gated} {property} in 2025 and what will be the price in future , just write the numbers and years"
             }
         ]
     }
