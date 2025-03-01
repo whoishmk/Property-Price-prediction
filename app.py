@@ -67,3 +67,12 @@ if st.button("Submit"):
         st.write(first_content)
     else:
         st.error(f"Failed to fetch data from API. Status Code: {response.status_code}")
+import matplotlib.pyplot as plt
+import numpy as np
+
+# define data values
+x = np.array([1, 2, 3, 4])  # X-axis points
+y = x*2  # Y-axis points
+
+plt.plot(x, y)  # Plot the chart
+plt.show() 
