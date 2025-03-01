@@ -2,6 +2,10 @@
 # Property Price Prediction
 
 A Streamlit-based application to predict average property prices and future predictions using OpenRouter’s API.
+## Hosted Site:
+```bash
+https://vyzasolutionspropertypriceprediction.streamlit.app/
+```
 
 ## Features
 
