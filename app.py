@@ -22,9 +22,7 @@ bhk = st.text_input("Enter the number of Bedrooms:")
 age = st.text_input("Enter the age of the property: (in years)" )
 gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
 
-# conditional statement to print 
-# Male if male is selected else print female
-# show the result using the success function
+
 if (gated == 'Yes'):
     st.success("Gated")
 else:
@@ -32,9 +30,7 @@ else:
                 
 property = st.radio("Select Type of Property: ", ('Apartment', 'House' , 'Villa','Building'))
 
-# conditional statement to print 
-# Male if male is selected else print female
-# show the result using the success function
+
 if (property == 'Apartment'):
     st.success("Apartment")
 elif (property == 'House'):
