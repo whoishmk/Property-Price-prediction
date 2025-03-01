@@ -17,7 +17,7 @@ st.title("VYZA Solutions' Property Price Prediction")
 #image
 from PIL import Image
 image = Image.open('vyza_solutions_pvt_ltd_cover.jpg')
-st.image(image, caption='Property Price Prediction', use_column_width=True)
+st.image(image, caption='Property Price Prediction')
 
 # Input widgets for user data
 area = st.text_input("Enter the area:")
