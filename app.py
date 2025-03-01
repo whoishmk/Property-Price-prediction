@@ -19,6 +19,7 @@ st.title("VYZA Solutions' Property Price Prediction")
 area = st.text_input("Enter the area:")
 city = st.text_input("Enter the city:")
 bhk = st.text_input("Enter the number of Bedrooms:")
+age = st.text_input("Enter the age of the property:")
 gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
 
 # conditional statement to print 
@@ -49,7 +50,7 @@ if st.button("Submit"):
         "messages": [
             {
                 "role": "user", 
-                "content": f"Average property price in {area} {city} for a {bhk} {gated} {property} in 2025 and what will be the price in future , just write the numbers and years"
+                "content": f"Average property price in {area} {city} for a {bhk} {gated} which was built in {age} {property} in 2025 and what will be the price in future , just write the numbers and years"
             }
         ]
     }
