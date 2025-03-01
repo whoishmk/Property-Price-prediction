@@ -13,7 +13,7 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-st.title("Property Price Prediction")
+st.title("VYZA Solutions' Property Price Prediction")
 
 # Input widgets for user data
 area = st.text_input("Enter the area:")
