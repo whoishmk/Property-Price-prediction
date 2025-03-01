@@ -19,11 +19,21 @@ st.title("Property Price Prediction")
 area = st.text_input("Enter the area:")
 city = st.text_input("Enter the city:")
 bhk = st.text_input("Enter the BHK:")
-gated = st.text_input("Enter Gated:")
+gated = st.text_input("Enter Gated:") 
+gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
+
+# conditional statement to print 
+# Male if male is selected else print female
+# show the result using the success function
+if (status == 'Yes'):
+    st.success("Gated")
+else:
+    st.success("Not gated")
+                
 flat = st.text_input("Enter Flat:")
 
 if st.button("Submit"):
-    # Define the request payload (data)
+    # Define the reyquest payload (data)
     data = {
         "model": "deepseek/deepseek-chat:free",
         "messages": [
