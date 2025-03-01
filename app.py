@@ -30,7 +30,19 @@ else:
     st.success("Not gated")
                 
 flat = st.text_input("Enter Flat:")
+property = st.radio("Select Type of Property: ", ('Apartment', 'House' , 'Villa'))
 
+# conditional statement to print 
+# Male if male is selected else print female
+# show the result using the success function
+if (property == 'Apartment'):
+    st.success("Apartment")
+elif (property == 'House'):
+    st.success("House")
+else:
+    st.success("Villa")
+
+ 
 if st.button("Submit"):
     # Define the reyquest payload (data)
     data = {
