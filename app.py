@@ -30,7 +30,7 @@ if (gated == 'Yes'):
 else:
     st.success("Not gated")
                 
-property = st.radio("Select Type of Property: ", ('Apartment', 'House' , 'Villa'))
+property = st.radio("Select Type of Property: ", ('Apartment', 'House' , 'Villa','Building'))
 
 # conditional statement to print 
 # Male if male is selected else print female
@@ -39,6 +39,8 @@ if (property == 'Apartment'):
     st.success("Apartment")
 elif (property == 'House'):
     st.success("House")
+elif (property == 'Building'):
+    st.success("Building")
 else:
     st.success("Villa")
 
