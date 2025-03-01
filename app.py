@@ -19,13 +19,12 @@ st.title("Property Price Prediction")
 area = st.text_input("Enter the area:")
 city = st.text_input("Enter the city:")
 bhk = st.text_input("Enter the BHK:")
-gated = st.text_input("Enter Gated:") 
 gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
 
 # conditional statement to print 
 # Male if male is selected else print female
 # show the result using the success function
-if (status == 'Yes'):
+if (gated == 'Yes'):
     st.success("Gated")
 else:
     st.success("Not gated")
