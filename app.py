@@ -19,7 +19,7 @@ st.title("VYZA Solutions' Property Price Prediction")
 area = st.text_input("Enter the area:")
 city = st.text_input("Enter the city:")
 bhk = st.text_input("Enter the number of Bedrooms:")
-age = st.text_input("Enter the age of the property:")
+age = st.text_input("Enter the age of the property: (in years)" )
 gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
 
 # conditional statement to print 
