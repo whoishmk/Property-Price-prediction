@@ -56,7 +56,7 @@ if st.button("Get Price Predictions"):
         "messages": [
             {
                 "role": "user", 
-                "content": f"Fair property price in {area} {city} for a {bhk} {gated} which was built in {age} {property} in 2025 and what will be the price in future, just write the numbers and years. Also, list the amenities near {area} {city}: {amenities}"
+                "content": f"Fair property price in {area} {city} for a {bhk} {gated} which was built in {age} {property} in 2025 and what will be the price in future, just write the numbers and years. Also, list the amenities and count near {area} {city}: {amenities}"
             }
         ]
     }
