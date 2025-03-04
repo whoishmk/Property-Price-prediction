@@ -24,9 +24,11 @@ st.image(image, caption='Hasib Md. Khan | Vyza Solutions Pvt. Ltd.')
 area = st.text_input("Enter the area:")
 city = st.text_input("Enter the city:")
 bhk = st.text_input("Enter the number of Bedrooms:")
-age = st.text_input("Enter the age of the property: (in years)" )
+age = st.text_input("Enter the age of the property: (in years)")
 gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
 
+# New input widget for amenities
+amenities = st.text_input("Enter nearby amenities (comma-separated):")
 
 if (gated == 'Yes'):
     st.success("Gated")
@@ -47,13 +49,13 @@ else:
 
  
 if st.button("Get Price Predictions"):
-    # Define the reyquest payload (data)
+    # Define the request payload (data)
     data = {
         "model": "deepseek/deepseek-chat:free",
         "messages": [
             {
                 "role": "user", 
-                "content": f"Average property price in {area} {city} for a {bhk} {gated} which was built in {age} {property} in 2025 and what will be the price in future , just write the numbers and years"
+                "content": f"Fair property price in {area} {city} for a {bhk} {gated} which was built in {age} {property} in 2025 and what will be the price in future, just write the numbers and years. Also, list the amenities near {area} {city}: {amenities}"
             }
         ]
     }
@@ -64,11 +66,10 @@ if st.button("Get Price Predictions"):
     if response.status_code == 200:
         api_response = response.json()
         first_content = api_response['choices'][0]['message']['content']  # Extract first content
-        st.success("Predicted Prices:")
+        st.success("Predicted Prices and Amenities:")
         st.write(first_content)
     else:
         st.error(f"Failed to fetch data from API. Status Code: {response.status_code}")
-
 
 # import pandas as pd
 # from sklearn.feature_extraction.text import TfidfVectorizer
