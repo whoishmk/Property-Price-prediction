@@ -25,10 +25,11 @@ area = st.text_input("Enter the area:")
 city = st.text_input("Enter the city:")
 bhk = st.text_input("Enter the number of Bedrooms:")
 age = st.text_input("Enter the age of the property: (in years)")
+amenities = st.text_input("Enter nearby amenities (comma-separated):")
 gated = st.radio("Select Gated or not: ", ('Yes', 'No'))
 
 # New input widget for amenities
-amenities = st.text_input("Enter nearby amenities (comma-separated):")
+
 
 if (gated == 'Yes'):
     st.success("Gated")
